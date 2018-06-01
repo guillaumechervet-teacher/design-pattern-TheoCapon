@@ -71,7 +71,7 @@ namespace BasketTest
                 var jsonPath = Path.Combine(assemblyDirectory, "article-database.json"); 
                 IList<ArticleDatabase> articleDatabases = JsonConvert.DeserializeObject<List<ArticleDatabase>>(File.ReadAllText(jsonPath)); 
                 var article = articleDatabases.First(articleDatabase => 
-                    articleDatabase.Id == basketLineArticle.Id); 
+                    articleDatabase.Id == basketLineArticle.Id);  
 // Calculate amount
                 var amount = 0; 
                 switch(article.Category) 
