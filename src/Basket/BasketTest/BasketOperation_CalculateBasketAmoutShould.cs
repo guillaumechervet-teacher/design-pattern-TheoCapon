@@ -10,7 +10,7 @@ using Newtonsoft.Json;
 namespace BasketTest
 {
     [TestClass]
-    internal class BasketOperation_CalculateBasketAmoutShould
+    public class BasketOperation_CalculateBaskedAmoutShould
     {
         public class BasketTest
         {
@@ -28,16 +28,11 @@ namespace BasketTest
                     {
                         new BasketTest()
                         {
-                            BasketLineArticles = new List<BasketLineArticle>
+                            BasketLineArticles = new List<BasketLineArticle>()
                             {
                                 new BasketLineArticle {Id = "1", Number = 12, Label = "Banana"},
                                 new BasketLineArticle {Id = "2", Number = 1, Label = "Fridge electrolux"},
-                                new BasketLineArticle
-                                {
-                                    Id = "3",
-                                    Number = 4,
-                                    Label = "Chair"
-                                }
+                                new BasketLineArticle {Id = "3", Number = 4, Label = "Chair"}
                             },
                             ExpectedPrice = 84868
                         }
@@ -57,6 +52,10 @@ namespace BasketTest
                 };
             }
         }
+
+
+
+
         [TestMethod]
         [DynamicData("Baskets")] 
         public void ReturnCorrectAmoutGivenBasket(BasketTest basketTest) 
@@ -90,7 +89,6 @@ namespace BasketTest
                 amountTotal += amount * basketLineArticle.Number; 
             } 
             Assert.AreEqual(amountTotal, basketTest.ExpectedPrice); 
-        } 
-        
-    } 
+        }
+    }
 }

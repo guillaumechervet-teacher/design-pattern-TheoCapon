@@ -2,17 +2,18 @@
 
 namespace Basket
 {
-    public class ImperativeProgramming
-    {
-        public static int CalculateBasketAmount(IList<BasketLineArticle> basketLineArticles) 
-        { 
+  //  public class ImperativeProgramming
+    //{
+    //    public static int CalculateBasketAmount(IList<BasketLineArticle> basketLineArticles) 
+    //  { 
 // here your code implementation
             
-        }
+    //  }
         
-        public static ArticleDatabase GetArticleDatabase(string id) 
-        { 
+    //  public static ArticleDatabase GetArticleDatabase(string id) 
+    //  { 
 // here your code implementation
-        }
-    }
+      //  }
+ 
+    // }
 }
